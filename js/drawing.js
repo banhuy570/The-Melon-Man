@@ -149,30 +149,30 @@ game.requestRedraw = function () {
     // game.context.fillText("Press any button to play again", game.canvas.width / 2, game.canvas.height / 2 + 120)
 
     // Add event listener to restart the game
-    document.addEventListener("keydown", function(event) {
-      game.restartGame();
-    });
+    // document.addEventListener("keydown", function(event) {
+    //   game.restartGame();
+    // });
   }
 }
 
 // Add a new function to restart the game
-game.restartGame = function() {
-  // Reset game state
-  game.isOver = false;
-  game.score = 0;
-  game.player.x = game.options.canvasWidth / 2;
-  game.player.y = game.options.canvasHeight / 2;
-  game.player.highestY = 0;
-  game.player.fallInterval = setInterval(game.player.fall, 1000 / 60);
+// game.restartGame = function() {
+//   // Reset game state
+//   game.isOver = false;
+//   game.score = 0;
+//   game.player.x = game.options.canvasWidth / 2;
+//   game.player.y = game.options.canvasHeight / 2;
+//   game.player.highestY = 0;
+//   game.player.fallInterval = setInterval(game.player.fall, 1000 / 60);
 
-  // Keep the highest score
-  if (game.score > game.highScore) {
-    game.highScore = game.score;
-  }
+//   // Keep the highest score
+//   if (game.score > game.highScore) {
+//     game.highScore = game.score;
+//   }
 
-  // Remove event listener
-  document.removeEventListener("keydown", game.restartGame);
+//   // Remove event listener
+//   document.removeEventListener("keydown", game.restartGame);
 
-  // Request a new redraw
-  game.requestRedraw();
-}
+//   // Request a new redraw
+//   game.requestRedraw();
+// }
