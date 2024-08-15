@@ -79,4 +79,5 @@ game.keyup = function (event) {
 			clearInterval(game.player.moveRightInterval)
 			break
 		}
+		
 }
